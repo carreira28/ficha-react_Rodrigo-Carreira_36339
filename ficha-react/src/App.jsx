@@ -7,14 +7,6 @@ function CartaoUtilizador({ nome, curso, ano }) {
  </div>
   );
 }
-export default function App() {
- return (
- <div>
- {CartaoUtilizador}
- {<CartaoUtilizador nome="Rodrigo Carreira" curso="teste" ano={1} />}
- </div>
- );
-}
 
 const estudantes = [
  { id: 1, nome: "Ana Costa", curso: "Eng. Informática", ano: 1 },
@@ -25,8 +17,22 @@ function ListaEstudantes() {
  return (
  <div>
  <h1>Turma de Programação Web</h1>
- {estudantes.map()  }
- {/* IMPORTANTE: Não te esqueças da prop key={estudante.id} */}
+ {estudantes.map((estudantes) =>(
+  <CartaoUtilizador key={estudantes.id} nome={estudantes.nome} curso={estudantes.curso} ano={estudantes.ano}
+  />
+ ))}
+ </div>
+ );
+}
+
+export default function App() {
+ return (
+ <div>
+ {CartaoUtilizador}
+ <CartaoUtilizador nome="Rodrigo Carreira" curso="teste" ano={1} 
+ />
+ <hr/>
+<ListaEstudantes />
  </div>
  );
 }
