@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Estudantes from './pages/Estudantes';
 import PerfilEstudante from './pages/PerfilEstudante';
+import Registo from './pages/Registo';
+import Notas from './pages/Notas';
+import Erro from './pages/Erro'
 export default function App() {
  return (
  <BrowserRouter>
@@ -14,6 +17,9 @@ export default function App() {
   <Route path='/sobre' element={<Sobre/>}/>
   <Route path='/estudantes' element={<Estudantes/>}/>
   <Route path="/estudantes/:id" element={<PerfilEstudante />}/>
+  <Route path='/registo' element={<Registo/>}/>
+  <Route path='/notas' element={<Notas/>}/>
+  <Route path='*' element={<Erro/>}/>
  </Routes>
  </BrowserRouter>
  );

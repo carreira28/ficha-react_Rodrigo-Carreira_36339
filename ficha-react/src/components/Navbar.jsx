@@ -14,6 +14,14 @@ export default function Navbar() {
 <NavLink to="/estudantes" style={({ isActive }) => ({ color: isActive ? '#61DAFB' : 'white' })}>
   Estudantes
 </NavLink>
+
+<NavLink to="/registo" style={({ isActive }) => ({ color: isActive ? '#61DAFB' : 'white' })}>
+  Registo
+</NavLink>
+
+<NavLink to="/notas" style={({ isActive }) => ({ color: isActive ? '#61DAFB' : 'white' })}>
+  Notas
+</NavLink>
  </nav>
  );
 }
