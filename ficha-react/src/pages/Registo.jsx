@@ -42,7 +42,7 @@ marginTop: '4px' }}
  <label>Ano Curricular:</label>
  <select 
  value={ano}
- onChange={(e) => setAno(e.target.value)}
+ onChange={(e) => setAno(Number(e.target.value))}
  style={{ display: 'block', width: '100%', padding: '8px',
 marginTop: '4px' }}>
  <option value={1}>1.º Ano</option>
